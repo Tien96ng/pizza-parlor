@@ -5,15 +5,27 @@ function Pizza(toppings = {}, size = "small") {
 
 Pizza.prototype.costOfPizza = function() {
   let selectedToppingsArr = [];
+  let sizePrice = 0;
+
   Object.entries(this.toppings).forEach(topping => {
     console.log(topping)
     if(topping[1]) {
       selectedToppingsArr.push(topping[0])
     }
   });
+  
+  switch(this.size) {
+    case "large":
+      sizePrice = 15;
+      break;
+    case "medium":
+      sizePrice = 12;
+      break;
+    default:
+      sizePrice = 10;
+  }
 
-
-  return selectedToppingsArr;
+  return (selectedToppingsArr.length * 1.5) + sizePrice;
 }
 
 $(document).ready(function() {
@@ -32,8 +44,16 @@ $(document).ready(function() {
     let toppingsObj = {pepperoni, mushroom, onions, sausage, bacon};
 
     let newPizza =  new Pizza(toppingsObj, size);
-    console.log(newPizza.costOfPizza())
+    let totalprice = newPizza.costOfPizza();
+
+    $("#total-price").text(totalprice);
+    $("#receipt-container").show();
+
+    console.log(totalprice);
 
     this.reset();
   });
+
+  
+
 });

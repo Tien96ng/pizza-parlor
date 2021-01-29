@@ -53,3 +53,8 @@ div#order-container h4, div#toppings-container p, #size-label {
 button {
   margin-top: 10px;
 }
+
+#receipt-container {
+  border: 2px solid black;
+  display: none;
+}
