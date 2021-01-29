@@ -24,17 +24,31 @@ body {
 
 #order-container {
   margin-top: 30px;
-  border: solid 6px rgba(232, 236, 241, .4);
+  border: solid 6px rgba(0, 0, 0, .3);
   background-color: rgba(255, 255, 255, .3);
   width: 400px;
   padding: 10px;
 
 }
 
-div#order-container h4 {
+div#order-container h4, div#toppings-container p, #size-label {
   font-weight: bold;
 }
 
 .center-text, form {
   text-align: center;
+}
+
+.toppings {
+  float: left;
+  margin-left: 100px;
+  font-style: italic;
+}
+
+#toppings-container {
+  margin-bottom: 35px;
+}
+
+button {
+  margin-top: 10px;
 }

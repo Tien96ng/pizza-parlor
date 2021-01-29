@@ -16,8 +16,10 @@
       <div id="order-container">
         <h4 class="center-text"> Order Here </h4>
         <hr>
+
         <form id="pizza-order">
-          <label form="size">Choose your Pizza size: </label><br>
+          <label for="size" id="size-label">Choose your Pizza size: </label>
+          <br>
           <select name="size" id="size">
             <option value="default" selected id="default-size">Select a Size...</option>
             <option value="small">Small (10")</option>
@@ -26,6 +28,30 @@
           </select>
           <hr>
 
+
+          <div id="toppings-container">
+            <p for="size">Choose Toppings: </p>
+          
+            <input type="checkbox" id="pepperoni" name="pepperoni" value="Pepperoni" class="toppings">
+            <label for="pepperoni" class="toppings"> Pepperoni </label>
+            <br>
+  
+            <input type="checkbox" id="onions" name="onions" value="Onions" class="toppings">
+            <label for="onions" class="toppings"> Onions </label>
+            <br>
+  
+            <input type="checkbox" id="sausage" name="sausage" value="Sausage" class="toppings">
+            <label for="sausage" class="toppings"> Sausage </label>
+            <br>
+  
+            <input type="checkbox" id="bacon" name="bacon" value="Bacon" class="toppings">
+            <label for="bacon" class="toppings"> Bacon </label>
+            <br>
+          </div>
+
+          <hr>
+
+          <button type="submit" value="Submit" class="btn btn-danger"> Order Pizza </button>
         </form>
       </div>
     </div>
