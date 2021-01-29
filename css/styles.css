@@ -3,6 +3,7 @@ body {
   background-repeat: no-repeat;
   background-size: 2000px;
   font-family: 'Courier New', monospace;
+  overflow-x: hidden;
 }
 
 .container {
