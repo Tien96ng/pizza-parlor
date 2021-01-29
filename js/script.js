@@ -15,11 +15,12 @@ $(document).ready(function() {
 
     let size = $("#size :selected").val();
     let pepperoni = $("#pepperoni").is(":checked");
+    let mushroom = $("#mushroom").is(":checked");
     let onions = $("#onions").is(":checked");
     let sausage = $("#sausage").is(":checked");
     let bacon = $("#bacon").is(":checked");
 
-    let toppingsArr = {pepperoni, onions, sausage, bacon};
+    let toppingsArr = {pepperoni, mushroom, onions, sausage, bacon};
 
     console.log(size);
     console.log(toppingsArr)
