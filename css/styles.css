@@ -1,0 +1,19 @@
+body {
+  background-image: url("https://www.wallpapertip.com/wmimgs/92-923657_chicken-and-mushroom-pizza-png.jpg");
+  background-repeat: no-repeat;
+  background-size: 2000px;
+}
+
+#logo-container {
+  background-color: rgba(0, 0, 0, .3);
+  border: dashed rgba(0, 0, 0, .6) 1px;
+  width: 400px;
+  border-radius: 50%;
+  margin: 100px 0px 0px 900px;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
