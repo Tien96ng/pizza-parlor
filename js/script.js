@@ -1,10 +1,19 @@
-function Pizza(toppings = [], size = "small") {
+function Pizza(toppings = {}, size = "small") {
   this.toppings = toppings;
   this.size = size
 }
 
 Pizza.prototype.costOfPizza = function() {
-  return this.size === small ?  (this.toppings.length * 2) + 5 : 5;
+  let selectedToppingsArr = [];
+  Object.entries(this.toppings).forEach(topping => {
+    console.log(topping)
+    if(topping[1]) {
+      selectedToppingsArr.push(topping[0])
+    }
+  });
+
+
+  return selectedToppingsArr;
 }
 
 $(document).ready(function() {
@@ -20,10 +29,10 @@ $(document).ready(function() {
     let sausage = $("#sausage").is(":checked");
     let bacon = $("#bacon").is(":checked");
 
-    let toppingsArr = {pepperoni, mushroom, onions, sausage, bacon};
+    let toppingsObj = {pepperoni, mushroom, onions, sausage, bacon};
 
-    console.log(size);
-    console.log(toppingsArr)
+    let newPizza =  new Pizza(toppingsObj, size);
+    console.log(newPizza.costOfPizza())
 
     this.reset();
   });
