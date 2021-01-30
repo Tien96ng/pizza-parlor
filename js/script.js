@@ -1,11 +1,10 @@
-function Pizza(toppings = {}, size = "small") {
+function Pizza(toppings, size = "small") {
   this.toppings = toppings;
   this.size = size
 }
 
-Pizza.prototype.costOfPizza = function() {
+Pizza.prototype.specs = function() {
   let selectedToppingsArr = [];
-  let sizePrice = 0;
 
   Object.entries(this.toppings).forEach(topping => {
     console.log(topping)
@@ -13,6 +12,13 @@ Pizza.prototype.costOfPizza = function() {
       selectedToppingsArr.push(topping[0])
     }
   });
+
+  return selectedToppingsArr;
+}
+
+Pizza.prototype.costOfPizza = function() {
+  let toppings = this.specs();
+  let sizePrice = 0;
   
   switch(this.size) {
     case "large":
@@ -25,8 +31,9 @@ Pizza.prototype.costOfPizza = function() {
       sizePrice = 10;
   }
 
-  return (selectedToppingsArr.length * 1.5) + sizePrice;
+  return ((toppings.length * 1.5) + sizePrice).toFixed(2);
 }
+
 
 $(document).ready(function() {
   let toppingsObj = {};
@@ -42,17 +49,22 @@ $(document).ready(function() {
     let bacon = $("#bacon").is(":checked");
 
     let toppingsObj = {pepperoni, mushroom, onions, sausage, bacon};
-
     let newPizza =  new Pizza(toppingsObj, size);
-    let totalprice = newPizza.costOfPizza();
 
-    $("#total-price").text(totalprice);
+    let tax = newPizza.costOfPizza() / 10;
+    let total = parseFloat(newPizza.costOfPizza()) + tax;
+
+    $("#pizza-detail").text(newPizza.specs());
+    $("#price-detail").text(newPizza.costOfPizza());
+    $("#tax").text(tax);
+    $("#total-price").text(total);
     $("#receipt-container").show();
-
-    console.log(totalprice);
+    $(".container").hide();
 
     this.reset();
   });
+
+
 
   
 

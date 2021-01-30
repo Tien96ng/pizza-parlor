@@ -55,13 +55,28 @@
 
           <hr>
 
-          <button type="submit" value="Submit" class="btn btn-danger"> Order Pizza </button>
+          <button type="submit" value="Submit" class="btn btn-danger btn-lg"> Order Pizza </button>
         </form>
       </div>
     </div>
 
     <div id="receipt-container">
-      <h1> Total: $<span id="total-price"></span></h1>
+      <h1 class="logo"> Epicodus Pizza </h1>
+
+      <div class="transactionDetails">
+        <div class="detail detail-bold">1</div>
+        <div class="detail" id="pizza-detail"></div>
+        <div class="detail detail-bold" id="price-detail"></div>
+      </div>
+
+      <div class="paymentDetails bold">
+        <div class="detail">TAX</div>
+        <div class="detail">$<span id="tax"></span></div>
+      </div>
+
+      <h1 id="total-h1"> Total: $<span id="total-price"></span></h1>
+      <p> Thanks for ordering from Epicodus Pizza!</p>
+      <button type="button" value="Order Again" class="btn btn-light btn-lg" id="order-again-btn"> Order Again </button>
     </div>
 
   </body>
