@@ -20,13 +20,13 @@ _This a a pizza ordering app for a company where they can choose one or more ind
 _If neither option is appeal, please view the live project [here](https://tien96ng.github.io/pizza-parlor/)!_
 
 ## Test Specs
-**Describe: specs(toppings)**\
+**Describe: Pizza.prototype.specs(toppings)**\
 Test: Takes in toppings Object and returns a filtered array of toppings the user selected for their pizza.\
-Expect(specs({pepperoni: false, mushroom: false, onions: true, sausage: false, bacon:false}).toEqual(["onions"]);
+Expect(pizza.specs({pepperoni: false, mushroom: false, onions: true, sausage: false, bacon:false}).toEqual(["onions"]);
 
-**Describe: costOfPizza(specs, size)**\
+**Describe: Pizza.prototype.costOfPizza(specs, size)**\
 Test: Takes in toppings array that the user selected and the pizza size to determine the price depending on the 2 variables.\
-Expect(specs(["onions", "pepperoni"], "small").toEqual(13);
+Expect(pizza.specs(["onions", "pepperoni"], "small").toEqual(13);
 
 
 ## Known Bugs
