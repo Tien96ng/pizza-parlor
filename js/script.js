@@ -7,7 +7,6 @@ Pizza.prototype.specs = function() {
   let selectedToppingsArr = [];
 
   Object.entries(this.toppings).forEach(topping => {
-    console.log(topping)
     if(topping[1]) {
       selectedToppingsArr.push(topping[0])
     }
@@ -36,7 +35,6 @@ Pizza.prototype.costOfPizza = function() {
 
 
 $(document).ready(function() {
-  let toppingsObj = {};
 
   $("#pizza-order").submit(function(event) {
     event.preventDefault();
@@ -52,11 +50,11 @@ $(document).ready(function() {
     let newPizza =  new Pizza(toppingsObj, size);
 
     let tax = newPizza.costOfPizza() / 10;
-    let total = parseFloat(newPizza.costOfPizza()) + tax;
+    let total = (parseFloat(newPizza.costOfPizza()) + tax).toFixed(2);
 
     $("#pizza-detail").text(newPizza.specs());
     $("#price-detail").text(newPizza.costOfPizza());
-    $("#tax").text(tax);
+    $("#tax").text(tax.toFixed(2));
     $("#total-price").text(total);
     $("#receipt-container").animate({
       left: "+=50",
