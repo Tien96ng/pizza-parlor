@@ -25,7 +25,7 @@ Test: Takes in toppings Object and returns a filtered array of toppings the user
 Expect(specs({pepperoni: false, mushroom: false, onions: true, sausage: false, bacon:false}).toEqual(["onions"]);
 
 **Describe: costOfPizza(specs, size)**\
-Test: Takes in toppings array that the user selected and the pizza size to determine the price depending on the 2 variables.
+Test: Takes in toppings array that the user selected and the pizza size to determine the price depending on the 2 variables.\
 Expect(specs(["onions", "pepperoni"], "small").toEqual(13);
 
 
