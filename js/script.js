@@ -58,14 +58,17 @@ $(document).ready(function() {
     $("#price-detail").text(newPizza.costOfPizza());
     $("#tax").text(tax);
     $("#total-price").text(total);
-    $("#receipt-container").show();
+    $("#receipt-container").animate({
+      left: "+=50",
+      height: "toggle"
+    }, 2000);
     $(".container").hide();
 
     this.reset();
   });
 
-
-
-  
-
+  $("#order-again-btn").click(function() {
+    $(".container").fadeIn();
+    $("#receipt-container").hide();
+  });
 });

@@ -63,7 +63,7 @@ button {
   padding: 20px 10px;
   text-align: center;
   width: 300px;
-  height: 450px;
+  height: 410px;
   background: rgba(255, 255, 255, .9);
   margin: 0 auto;
   box-shadow: 5px 5px 19px black;
@@ -109,7 +109,9 @@ button {
   margin-top: 50px;
 }
 
-.btn-danger:hover {
+.btn-danger:hover, #order-again-btn:hover {
   background-color: green;
   outline: none;
+  border: 0;
+  color: white;
 }
