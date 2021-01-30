@@ -47,6 +47,7 @@ $(document).ready(function() {
     let bacon = $("#bacon").is(":checked");
 
     let toppingsObj = {pepperoni, mushroom, onions, sausage, bacon};
+    console.log(toppingsObj)
     let newPizza =  new Pizza(toppingsObj, size);
 
     let tax = newPizza.costOfPizza() / 10;
