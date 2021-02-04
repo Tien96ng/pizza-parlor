@@ -20,6 +20,10 @@ _This a a pizza ordering app for a company where they can choose one or more ind
 _If neither option is appeal, please view the live project [here](https://tien96ng.github.io/pizza-parlor/)!_
 
 ## Test Specs
+**Describe: Pizza()**\
+Test: Should return a new pizza object with the toppings and size.\
+Expect(let newPizza = new Pizza({pepperoni: true, mushroom: true, onions: false, sausage: true, bacon: false}, "small")).toEqual({pepperoni: true, mushroom: true, onions: false, sausage: true, bacon: false}, "small"));
+
 **Describe: Pizza.prototype.addToppings(toppings)**\
 Test: Should return an array of toppings to add to the order that the user selected from the order form.\
 Expect(pizza.addToppings({pepperoni: false, mushroom: false, onions: true, sausage: false, bacon:false}).toEqual(["onions"]);

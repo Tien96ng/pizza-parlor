@@ -56,6 +56,7 @@ $(document).ready(function() {
 
     let toppingsObj = {pepperoni, mushroom, onions, sausage, bacon};
     let newPizza =  new Pizza(toppingsObj, size);
+    console.log(newPizza.toppings);
 
     $("#pizza-detail").text(newPizza.addToppings());
     $("#price-detail").text(newPizza.costOfPizza());
