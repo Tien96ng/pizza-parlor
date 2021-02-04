@@ -32,6 +32,10 @@ Expect(pizza.specs(["onions", "pepperoni"], "small").toEqual(13);
 Test: Should return the tax of the cost of the order which is 10%.\
 Expect(pizza.specs(10.00).toEqual(1.00);
 
+**Describe: Pizza.prototype.totalWithTax(cost, tax)**\
+Test: Should return the total price of the pizza after tax is added.\
+Expect(pizza.specs(10.00, 1.00).toEqual(11.00);
+
 ## Known Bugs
 * _No None Bugs At the moment._
 
