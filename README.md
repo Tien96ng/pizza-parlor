@@ -21,7 +21,7 @@ _If neither option is appeal, please view the live project [here](https://tien96
 
 ## Test Specs
 **Describe: Pizza()**\
-Test: Should return a new pizza object with the toppings and size.\
+Test: Should return a new pizza object with the toppings and size values within.\
 Expect(let newPizza = new Pizza({pepperoni: true, mushroom: true, onions: false, sausage: true, bacon: false}, "small")).toEqual({pepperoni: true, mushroom: true, onions: false, sausage: true, bacon: false}, "small"));
 
 **Describe: Pizza.prototype.addToppings(toppings)**\
