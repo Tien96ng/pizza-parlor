@@ -33,6 +33,14 @@ Pizza.prototype.costOfPizza = function() {
   return ((toppings.length * 1.5) + sizePrice).toFixed(2);
 }
 
+Pizza.prototype.calculateTax = function() {
+  return (this.costOfPizza() / 10).toFixed(2);
+}
+
+Pizza.prototype.totalWithTax = function() {
+  return (parseFloat(this.costOfPizza()) + parseFloat(this.calculateTax())).toFixed(2);
+}
+
 
 $(document).ready(function() {
 
@@ -49,13 +57,10 @@ $(document).ready(function() {
     let toppingsObj = {pepperoni, mushroom, onions, sausage, bacon};
     let newPizza =  new Pizza(toppingsObj, size);
 
-    let tax = newPizza.costOfPizza() / 10;
-    let total = (parseFloat(newPizza.costOfPizza()) + tax).toFixed(2);
-
     $("#pizza-detail").text(newPizza.specs());
     $("#price-detail").text(newPizza.costOfPizza());
-    $("#tax").text(tax.toFixed(2));
-    $("#total-price").text(total);
+    $("#tax").text(newPizza.calculateTax());
+    $("#total-price").text(newPizza.totalWithTax());
     $("#receipt-container").animate({
       left: "+=50",
       height: "toggle"
