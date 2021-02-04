@@ -20,14 +20,17 @@ _This a a pizza ordering app for a company where they can choose one or more ind
 _If neither option is appeal, please view the live project [here](https://tien96ng.github.io/pizza-parlor/)!_
 
 ## Test Specs
-**Describe: Pizza.prototype.specs(toppings)**\
-Test: Takes in toppings Object and returns a filtered array of toppings the user selected for their pizza.\
-Expect(pizza.specs({pepperoni: false, mushroom: false, onions: true, sausage: false, bacon:false}).toEqual(["onions"]);
+**Describe: Pizza.prototype.addToppings(toppings)**\
+Test: Should return an array of toppings to add to the order that the user selected from the order form.\
+Expect(pizza.addToppings({pepperoni: false, mushroom: false, onions: true, sausage: false, bacon:false}).toEqual(["onions"]);
 
 **Describe: Pizza.prototype.costOfPizza(specs, size)**\
-Test: Takes in toppings array that the user selected and the pizza size to determine the price depending on the 2 variables.\
+Test: Should return the cost of the pizza depending on the number of toppings added and the size chosen.\
 Expect(pizza.specs(["onions", "pepperoni"], "small").toEqual(13);
 
+**Describe: Pizza.prototype.calculateTax(cost)**\
+Test: Should return the tax of the cost of the order which is 10%.\
+Expect(pizza.specs(10.00).toEqual(1.00);
 
 ## Known Bugs
 * _No None Bugs At the moment._

@@ -3,7 +3,7 @@ function Pizza(toppings, size = "small") {
   this.size = size
 }
 
-Pizza.prototype.specs = function() {
+Pizza.prototype.addToppings = function() {
   let selectedToppingsArr = [];
 
   Object.entries(this.toppings).forEach(topping => {
@@ -16,7 +16,7 @@ Pizza.prototype.specs = function() {
 }
 
 Pizza.prototype.costOfPizza = function() {
-  let toppings = this.specs();
+  let toppings = this.addToppings();
   let sizePrice = 0;
   
   switch(this.size) {
@@ -57,7 +57,7 @@ $(document).ready(function() {
     let toppingsObj = {pepperoni, mushroom, onions, sausage, bacon};
     let newPizza =  new Pizza(toppingsObj, size);
 
-    $("#pizza-detail").text(newPizza.specs());
+    $("#pizza-detail").text(newPizza.addToppings());
     $("#price-detail").text(newPizza.costOfPizza());
     $("#tax").text(newPizza.calculateTax());
     $("#total-price").text(newPizza.totalWithTax());
